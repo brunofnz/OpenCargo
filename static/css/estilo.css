@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/fondoHome.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+/*HEADER*/
+nav {
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.596);
+    border-bottom: 1p solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    position: fixed;
+    
+    /* top: 0;
+    z-index: 100; */
+
+
+    /* transition: ease-in-out 0.5s; */
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+}
+
+.nav .logo{
+    height: 80px;
+}
+
+.nav .logo img{
+    height: 100%;
+    vertical-align: top;
+}
+
+.enlaces-header {
+    font-weight: 300;
+}
+
+.enlaces-header a{
+    color: #2e294e;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
+
+.buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #2e2943;
+    padding: 10px;
+    height: 80px;
+    border-radius: 40px;
+}
+.buscar-texto{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    transition: .3s;
+    width: 0;
+}
+.boton{
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+/*=?===========RESPONSIVE=========*/
+
+@media screen and (min-width:480px){
+    .buscar:hover > .buscar-texto{
+        width: 190px;
+    }
+}
+
+@media screen and (min-width:768px){
+    .buscar:hover > .buscar-texto{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .buscar:hover > .buscar-texto{
+        width: 500px;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCargo</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section>
+                <div class="contenedor nav">
+                    <div class="logo">
+                        {% load static %}
+                        <img src="{% static 'img/logo1.png' %}" alt="">
+                    </div>
+                    <div class="enlaces-header">
+                        <a href="#">Registrarse como transporte</a>
+                        <a href="#">Registrarse como cliente</a>
+                        <a href="#">Ingresar</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <section>
+        <div class="buscar">
+            <input type="text" class="buscar-texto" placeholder="Buscá envíos cerca">
+            <a href="" class="boton">
+            <i class="icon-buscar"></i>
+            </a>
+
+        </div>
+    </section>
+
+    
+</body>
+
+</html>
