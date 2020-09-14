@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "buscar";
-  src:url("../fonts/buscar.eot");
-  src:url("../fonts/buscar.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/buscar.woff") format("woff"),
-    url("../fonts/buscar.ttf") format("truetype"),
-    url("../fonts/buscar.svg#buscar") format("svg");
+  src:url("{% static ../fonts/buscar.eot %}");
+  src:url("{% static ../fonts/buscar.eot?#iefix %}") format("embedded-opentype"),
+    url("{% static ../fonts/buscar.woff %}") format("woff"),
+    url("{% static ../fonts/buscar.ttf %}") format("truetype"),
+    url("{% static ../fonts/buscar.svg#buscar %}") format("svg");
   font-weight: normal;
   font-style: normal;
 

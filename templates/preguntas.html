@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-eqiv="X-UA-Compatible" content="ie=edge">
     <title>Preguntas frecuentes</title>
-    <link rel="stylesheet" href="css/estiloPF.css">
+    <link rel="stylesheet" href="{% static 'css/estiloPF.css' %}">
+    <style>
+        header{
+    width: 100%;
+    height: 400px;
+    background-image: url('{% static "img/mujer_comprando_desde_pc_con_tarjeta.jpg" %}');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #2e294e;
+    text-align: center;
+}
+header .textos{
+    margin-top: 152px;
+
+}
+header .titulo{
+    font-size: 60px;
+
+}
+header .subtitulo{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+.fondo{
+    height: 1000px;
+    position: relative;
+    background-image: url("{% static 'img/hombre_sosteniendo_cajas.jpg' %}");
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-attachment: center;
+    padding-top: 130px;
+}
+    </style>
 </head>
 <body>
     <header>
@@ -47,11 +87,11 @@
         <section class="galeria"> 
             <div class="sesgoabajo"></div>
             <div class="imagenes">
-                <img src="img/hombre_en_auto.jpg" alt=""></div>
+                <img src="{% static 'img/hombre_en_auto.jpg' %}" alt=""></div>
             <div class="imagenes">
-                <img src="img/mujer_sosteniendo_caja_sonriente.jpg" alt=""></div>
+                <img src="{% static 'img/fondoHome.jpg' %}" alt=""></div>
             <div class="imagenes">
-                <img src="img/hombre_entregando_paquete_en_auto.jpg" alt=""></div>
+                <img src="{% static 'img/hombre_entregando_paquete_en_auto.jpg' %}" alt=""></div>
     
         </section>
         <section class="miembros">
@@ -63,49 +103,49 @@
         <section class="equipo">
          
                 <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Antonella Duca</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Bruno Fernandez</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Nico</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Martina</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Luis Córdoba</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Jonatan</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                   <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Gabriel Herrera</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="img/isologo - con borde.png" alt="">
+                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
                     <h4>Samuel R</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
