@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from OpenCargo.views import home, preguntas
+from OpenCargo.views import home, preguntas, sign_upCLIENTE, sign_upCONDUCTOR
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home),
-    path('PreguntasFrecuentes/', preguntas)
+    path('PreguntasFrecuentes/', preguntas),
+    path('signUp-Cliente/', sign_upCLIENTE),
+    path('signUp-Conductor/', sign_upCONDUCTOR),
 ]
