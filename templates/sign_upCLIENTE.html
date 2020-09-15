@@ -181,42 +181,42 @@ body{
         <div class="title">
             Formulario de Registro 
         </div>
-        <form class="form" method="GET">
+        <form class="form" action="/registrar/" method="POST"> {% csrf_token %}
             <div class="input_field">
                 <label>Nombre/s</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="nombre">
             </div>
             <div class="input_field">
                 <label>Apellido/s</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="apellido">
             </div>
             <div class="input_field">
                 <label>Contraseña</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="contrasena1">
             </div>
             <div class="input_field">
                 <label>Confirmar contraseña</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="contrasena2">
             </div>
             <div class="input_field">
                 <label>CUIL/CUIT</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="documento">
             </div>
             <div class="input_field">
                 <label>Direccion</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="direccion">
             </div>
             <div class="input_field">
                 <label>Email</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="email">
             </div>
             <div class="input_field">
                 <label>¿Particular o empresa?</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="tipo">
             </div>
             <div class="input_field">
                 <label>Telefono</label>
-                <input type="text" class="input">
+                <input type="text" class="input" name="telefono">
             </div>
             <div class="input_field" terms>
                 <label class="check">

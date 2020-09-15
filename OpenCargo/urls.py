@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from OpenCargo.views import home, preguntas
-from apps.registrarCliente.views import sign_upCLIENTE, sign_upCONDUCTOR
+from apps.registrarCliente.views import sign_upCLIENTE, sign_upCONDUCTOR, registrar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('PreguntasFrecuentes/', preguntas),
     path('signUp-Cliente/', sign_upCLIENTE),
     path('signUp-Conductor/', sign_upCONDUCTOR),
+    path('registrar/', registrar)
 ]
