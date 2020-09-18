@@ -1,172 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenCargo</title>
-    {% load static %}
     <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.contenedor {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-}
-
-body{
+        body{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static "img/fondoHome.jpg" %}');
     height: 100vh;
     background-size: cover;
 }
 
-/*HEADER*/
-nav {
-    width: 100%;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.596);
-    border-bottom: 1p solid transparent;
-    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
-    position: fixed;
-    
-    /* top: 0;
-    z-index: 100; */
-
-
-    /* transition: ease-in-out 0.5s; */
-}
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    width: 100%;
-    align-items: center;
-}
-
-.nav .logo{
-    height: 80px;
-}
-
-.nav .logo img{
-    height: 100%;
-    vertical-align: top;
-}
-
-.enlaces-header {
-    font-weight: 300;
-}
-
-.enlaces-header a{
-    color: #2e294e;
-    text-decoration: none;
-    margin-left: 20px;
-
-}
-
-
-.buscar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background: #2e2943;
-    padding: 10px;
-    height: 80px;
-    border-radius: 40px;
-}
-.buscar-texto{
-    border: none;
-    background: none;
-    outline: none;
-    color: white;
-    font-size: 20px;
-    float: left;
-    line-height: 60px;
-    transition: .3s;
-    width: 0;
-}
-.boton{
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-}
-
-/*=?===========RESPONSIVE=========*/
-
-@media screen and (min-width:480px){
-    .buscar:hover > .buscar-texto{
-        width: 190px;
-    }
-}
-
-@media screen and (min-width:768px){
-    .buscar:hover > .buscar-texto{
-        width: 300px;
-    }
-}
-
-@media screen and (min-width:1024px){
-    .buscar:hover > .buscar-texto{
-        width: 500px;
-    }
-};
-
-@charset "UTF-8";
 
 @font-face {
   font-family: "buscar";
-  src:url("{% static 'fonts/buscar.eot' %}");
-  src:url("{% static 'fonts/buscar.eot?#iefix' %}") format("embedded-opentype"),
-    url("{% static 'fonts/buscar.woff' %}") format("woff"),
-    url("{% static 'fonts/buscar.ttf' %}") format("truetype"),
-    url("{% static 'fonts/buscar.svg#buscar' %}") format("svg");
+  src:url('{% static "fonts/buscar.eot" %}');
+  src:url('{% static "fonts/buscar.eot?#iefix" %}') format("embedded-opentype"),
+    url('{% static "fonts/buscar.woff" %}') format("woff"),
+    url('{% static "fonts/buscar.ttf" %}') format("truetype"),
+    url('{% static "fonts/buscar.svg#buscar" %}') format("svg");
   font-weight: normal;
   font-style: normal;
 
-}
-
-[data-icon]:before {
-  font-family: "buscar" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "buscar" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-buscar:before {
-  content: "\61";
 }
 
     </style>
@@ -178,13 +38,13 @@ nav {
             <section>
                 <div class="contenedor nav">
                     <div class="logo">
-                        {% load static %}
+
                         <img src="{% static 'img/logo1.png' %}" alt="">
                     </div>
                     <div class="enlaces-header">
-                        <a href="#">Registrarse como transporte</a>
-                        <a href="#">Registrarse como cliente</a>
-                        <a href="#">Ingresar</a>
+                        <a href="{% url 'sign_upCONDUCTOR' %}">Registrarse como transporte</a>
+                        <a href="{% url 'sign_upCLIENTE' %}">Registrarse como cliente</a>
+                        <a href="">Ingresar</a>
                     </div>
                 </div>
             </section>

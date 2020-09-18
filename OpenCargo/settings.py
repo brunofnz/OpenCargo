@@ -56,7 +56,7 @@ ROOT_URLCONF = 'OpenCargo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(os.path.dirname(BASE_DIR),'OpenCargo/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'open_cargo',
         'USER': 'postgres',
-        'PASSWORD': '',#aca va la contraseña de tu  base de datos, hacemos un testeo
+        'PASSWORD': 'AhqvmLGH',#aca va la contraseña de tu  base de datos, hacemos un testeo
         'HOST': '127.0.0.1',
         'DATABASE_PORT': 5432,
     }
@@ -124,4 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),'OpenCargo/static'),)
+

@@ -21,8 +21,8 @@ from apps.registrarCliente.views import sign_upCLIENTE, sign_upCONDUCTOR, regist
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('PreguntasFrecuentes/', preguntas),
-    path('signUp-Cliente/', sign_upCLIENTE),
-    path('signUp-Conductor/', sign_upCONDUCTOR),
-    path('registrar/', registrar)
+    path('PreguntasFrecuentes/', preguntas, name='PreguntasFrecuentes'),
+    path('signUp-Cliente/', sign_upCLIENTE,name='sign_upCLIENTE'),
+    path('signUp-Conductor/', sign_upCONDUCTOR,name='sign_upCONDUCTOR'),
+    path('registrar/', registrar,name='Registrar')
 ]
