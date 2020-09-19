@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Cliente, Transportista
+from OpenCargo.views import home
 
 # Create your views here.
 
@@ -18,9 +19,8 @@ def registrar(request):
         telefono = request.POST["telefono"]
         cliente = Cliente(nombre=nombre,apellido=apellido,contrasena=contrasena,cuil_cuit=cuil_cuit, direccion=direccion,email=email,tipo=tipo,telefono=telefono)
         cliente.save()
-    return sign_upCLIENTE(request)
+    return home(request)
         
-
 def sign_upCLIENTE(request):
     return render(request, "sign_upCLIENTE.html")
 
