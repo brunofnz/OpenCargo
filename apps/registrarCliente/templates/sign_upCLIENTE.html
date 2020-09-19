@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/stylesSignUpCliente.css' %}">
+    <title>Registro</title>
+    <style>
+        body{
+    background-image: url("{% static 'img/hombre_sosteniendo_cajas.jpg' %}");
+    background-size: cover;
+    padding: 0 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static 'img/isologo - con borde.png' %}">
+    <div class="triangulo-derecha"></div>
+    <div class="triangulo-izquierda"></div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="title">
+        Formulario de Registro 
+    </div>
+    <div class="form">
+        <div class="form">
+            <form>
+            <div class="input_field">
+                  <label>Nombre/s</label>
+                  <input type="text" class="input" required>
+              </div>
+              <div class="input_field">
+                  <label>Apellido/s</label>
+                  <input type="text" class="input" required>
+              </div>
+              <div class="input_field">
+                  <label>Contraseña</label>
+                  <input type="password" class="input" required>
+              </div>
+              <div class="input_field">
+                  <label>Confirmar contraseña</label>
+                  <input type="password" class="input" required>
+              </div>
+              <div class="input_field">
+                  <label>CUIL/CUIT</label>
+                  <input type="number" class="input" required>
+              </div>
+              <div class="input_field">
+                  <label>Direccion</label>
+                  <input type="text" class="input" required>
+              </div>
+              <div class="input_field">
+                  <label>Email</label>
+                  <input type="email" class="input" required>
+              </div>
+              <div class="input_field">
+                  <label>¿Particular o empresa?</label>
+                  <input type="radio" id="Particular" name="Particular/Empresa" value="Particular" required>
+                  <label for="Particular">Particular</label>
+                  <input type="radio" id="Empresa" name="Particular/Empresa" value="Empresa" required>
+                  <label for="Empresa">Empresa</label>
+              </div>
+              <div class="input_field">
+                  <label>Telefono</label>
+                  <input type="number" class="input" required>
+              </div>
+              <div class="input_field" terms>
+                  <label class="check">
+                      <input type="checkbox" required>
+                      <span class="checkmark"></span>
+                  </label>
+                  <p>Acepto los terminos y condiciones</p>
+              </div>
+              <div class="input_field">
+                  <input type="submit" value="Register" class="btn">
+                </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
