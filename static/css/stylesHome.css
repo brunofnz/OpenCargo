@@ -1,0 +1,37 @@
+.col-order-2 {
+    margin-top: 0px;
+}
+
+.titulo {
+    height: 200px;
+    margin-top: 150px;
+    margin-bottom: -80px;
+    margin-left: 60px;
+    color: #5F799A;
+}
+
+.d-flex {
+    margin-left: -50px;
+}
+
+.pedido {
+    margin-top: -60px;
+    margin-left: 1000px;
+    position: relative;
+    height: 100px;
+    width: 200px;
+}
+
+.container{
+    align-items: center;
+}
+.nav-link{
+    margin-bottom: -30px;
+    margin-left: 10px;
+}
+.card-columns {
+    width: 1000px;
+    margin-left: 150px;
+    margin-right: 100px;
+}
+

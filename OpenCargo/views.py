@@ -1,7 +1,7 @@
 
 from django.shortcuts import render
 
-def home(request):
+def landingPage(request):
     return render(request, "index.html")
 
 def preguntas(request):

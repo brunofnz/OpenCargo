@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Cliente, Transportista
-from OpenCargo.views import home
+from OpenCargo.views import landingPage
 
 # Create your views here.
 

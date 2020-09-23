@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  {% load static %}
+  <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HOME CLIENTE</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'Boostrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
+  </head>
+  <body>
+        <!--MENU CON LOGO-->
+        <div class="container-fluid bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
+                <a class="navbar-brand" href="#">
+                    <div class="d-flex align-items-start">
+                        <img src="{% static 'img/logo1.png' %}" width="250" class="d-flex justify-content-start align-top" alt="" loading="lazy">
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">INICIO</a>
+                        <a class="nav-link" href="#">VIAJES</a>
+                        <a class="nav-link" href="#">NOVEDADES</a>
+                        <a class="nav-link mr-4" href="#">MI CUENTA</a> 
+                    </div>
+                </div>
+            </nav>
+            <div class="pedido">
+              <a role="button" class="btn btn-primary">SOLICITAR PEDIDO</a>
+          </div>
+        </div>
+        <!--TARJETAS CON INFORMACION-->
+        <div class="row">
+            <div class="col">
+                <br>
+                <h1>Viajes disponibles</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            {% block content %}
+    
+            {% endblock %}
+        </div>
+          
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="{% static 'Boostrap/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

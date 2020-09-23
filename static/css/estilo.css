@@ -62,12 +62,12 @@ nav {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 50%;
+    left: 10%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-10%,-10%);
     background: #2e2943;
     padding: 10px;
-    height: 80px;
+    height: 40px;
     border-radius: 40px;
 }
 .buscar-texto{
@@ -77,9 +77,9 @@ nav {
     color: white;
     font-size: 20px;
     float: left;
-    line-height: 60px;
+    line-height: 30px;
     transition: .3s;
-    width: 0;
+    width: 10px;
 }
 .boton{
     width: 40px;
@@ -93,19 +93,19 @@ nav {
 
 @media screen and (min-width:480px){
     .buscar:hover > .buscar-texto{
-        width: 190px;
+        width: 50px;
     }
 }
 
 @media screen and (min-width:768px){
     .buscar:hover > .buscar-texto{
-        width: 300px;
+        width: 90px;
     }
 }
 
 @media screen and (min-width:1024px){
     .buscar:hover > .buscar-texto{
-        width: 500px;
+        width: 100px;
     }
 }
 

@@ -1,0 +1,29 @@
+.col-order-2 {
+    margin-top: 0px;
+}
+
+.titulo {
+    height: 200px;
+    margin-top: 150px;
+    margin-bottom: -80px;
+    margin-left: 60px;
+    color: #5F799A;
+}
+
+.d-flex {
+    margin-left: -50px;
+}
+
+.pedido {
+    margin-top: -40px;
+    margin-right: 250px;
+    position: absolute;
+}
+
+.nav-link{
+    margin-bottom: -30px;
+    margin-left: 10px;
+}
+.card {
+    margin-left: -60px;
+}
