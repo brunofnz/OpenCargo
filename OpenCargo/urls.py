@@ -32,7 +32,6 @@ urlpatterns = [
     path('signUp-Cliente/', sign_upCLIENTE,name='sign_upCLIENTE'),
     path('signUp-Conductor/', sign_upCONDUCTOR,name='sign_upCONDUCTOR'),
     path('registrar/', registrar,name='Registrar'),
-
     path('home/', include('apps.post.urls')),
-    path('home/', HomeView.as_view(), name="landing"),
+    
 ]
