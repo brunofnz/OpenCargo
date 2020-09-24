@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="col">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Enviar</button>
+    </form>
+    <br/><br/>
+    <a href="{% url 'home'%}" class="btn btn-dark">Back</a>
+</div>
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button>Enviar</button>
-</form>
-
-<br/><br/>
-<a href="{% url 'home'%}" class="btn btn-dark">Back</a>
 {% endblock %}
