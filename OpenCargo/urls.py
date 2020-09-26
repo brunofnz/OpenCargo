@@ -20,7 +20,7 @@ from django.urls import path, include
 from OpenCargo.views import landingPage, preguntas
 
 #app de registrar
-from apps.registrarCliente.views import sign_upCLIENTE, sign_upCONDUCTOR, registrar
+#from apps.registrarCliente.views import sign_upCLIENTE, sign_upCONDUCTOR, registrar
 
 #app de postear
 from apps.post.views import HomeView, PostDetailView, PostCreateView
@@ -29,9 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', landingPage, name='landingPage'),
     path('PreguntasFrecuentes/', preguntas, name='PreguntasFrecuentes'),
-    path('signUp-Cliente/', sign_upCLIENTE,name='sign_upCLIENTE'),
-    path('signUp-Conductor/', sign_upCONDUCTOR,name='sign_upCONDUCTOR'),
-    path('registrar/', registrar,name='Registrar'),
+    path('registrar/', include('apps.registrarCliente.urls')),
     path('home/', include('apps.post.urls')),
-    
+    path('members/', include('django.contrib.auth.urls')),
 ]

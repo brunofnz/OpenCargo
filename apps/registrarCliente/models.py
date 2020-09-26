@@ -1,11 +1,11 @@
-from django.db import models
+"""from django.db import models
 
 # Create your models here.
 
 class Cliente(models.Model):
     email=models.EmailField(primary_key=True)
-    nombre=models.CharField(max_length=100)
     apellido=models.CharField(max_length=100)
+    nombre=models.CharField(max_length=100)
     contrasena=models.CharField(max_length=50)
     cuil_cuit=models.CharField(max_length=200)
     direccion=models.CharField(max_length=200)
@@ -22,12 +22,7 @@ class Cliente(models.Model):
 
 
 class Transportista(models.Model):
-    email=models.EmailField(primary_key=True)
-    nombre=models.CharField(max_length=100)
-    apellido=models.CharField(max_length=100)
-    contrasena=models.CharField(max_length=50)
-    cuil_cuit=models.CharField(max_length=200)
-    direccion=models.CharField(max_length=200)
+    nombre = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     vehiculo=models.CharField(max_length=100)
     registro_conducir=models.CharField(max_length=100)
     seguro=models.CharField(max_length=100)
@@ -39,4 +34,8 @@ class Transportista(models.Model):
 
     def __str__(self):
         txt="{0}\t{1},{2}\t{3}\t"
-        return txt.format(self.cuil_cuit,self.apellido,self.nombre,self.vehiculo)
+        return txt.format(self.cuil_cuit,self.apellido,self.nombre,self.vehiculo)"""
+          
+from django.db import models
+
+# Create your models here.
