@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/stylesSignUpCliente.css' %}">
+    <title>Registro</title>
+    <style>
+        body{
+    background-image: url("{% static 'img/hombre_sosteniendo_cajas.jpg' %}");
+    background-size: cover;
+    padding: 0 10px;
+}
+    </style>
+    <script>
+        function comprobarClave(){
+            contrasena1 = document.f1.contrasena1.value
+            contrasena2 = document.f1.contrasena2.value
+        
+            if (contrasena1 == contrasena2)
+               alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo")
+            else
+               alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo")
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static 'img/isologo - con borde.png' %}">
+    <div class="triangulo-derecha"></div>
+    <div class="triangulo-izquierda"></div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="title">
+        Formulario de Registro 
+    </div>
+    <div class="form">
+        <div class="form">
+            <form method="POST">
+                <div class="input_field">
+                  <label>Nombre/s</label>
+                  <input type="text" class="input" required name="nombre">
+                </div>
+                <div class="input_field">
+                    <label>Apellido/s</label>
+                    <input type="text" class="input" required name="apellido">
+                </div>
+                <div class="input_field">
+                    <label>Contraseña</label>
+                    <input type="password" class="input" required name="contrasena1">
+                </div>
+                <div class="input_field">
+                    <label>Confirmar contraseña</label>
+                    <input type="password" class="input" required name="contrasena2">
+                </div>
+                <div class="input_field">
+                    <label>CUIL/CUIT</label>
+                    <input type="number" class="input" required name="cuil_cuit">
+                </div>
+                <div class="input_field">
+                    <label>Direccion</label>
+                    <input type="text" class="input" required name="direccion">
+                </div>
+                <div class="input_field">
+                    <label>Email</label>
+                    <input type="email" class="input" required name="email">
+                </div>
+                <div class="input_field">
+                    <label>¿Particular o empresa?</label>
+                    <input type="radio" id="Particular" name="tipo" value="Particular" required>
+                    <label for="Particular">Particular</label>
+                    <input type="radio" id="Empresa" name="tipo" value="Empresa" required>
+                    <label for="Empresa">Empresa</label>
+                </div>
+                <div class="input_field">
+                    <label>Telefono</label>
+                    <input type="number" class="input" required name="telefono">
+                </div>
+                <div class="input_field" terms>
+                    <label class="check">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Acepto los terminos y condiciones</p>
+                </div>
+                <div class="input_field">
+                <input type="submit" value="Register" class="btn" onclick="comprobarClave()">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

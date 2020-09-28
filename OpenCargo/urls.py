@@ -29,7 +29,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', landingPage, name='landingPage'),
     path('PreguntasFrecuentes/', preguntas, name='PreguntasFrecuentes'),
-    path('registrar/', include('apps.registrarCliente.urls')),
+    path('accounts/', include('apps.registrarCliente.urls')),
     path('home/', include('apps.post.urls')),
-    path('members/', include('django.contrib.auth.urls')),
 ]
