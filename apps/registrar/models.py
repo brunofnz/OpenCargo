@@ -59,7 +59,7 @@ class Transportista(models.Model):
         ordering = ['id_transportista']
 
     def __str__(self):
-        return "{}".format(self.user)
+        return "{}, {}".format(self.user.apellido,self.user.nombre)
 
 class Vehiculo(models.Model):
     id_vehiculo = models.AutoField(primary_key=True)
