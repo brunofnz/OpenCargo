@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 #landingPage, pagina principal o la del dominio
 from OpenCargo.views import landingPage, preguntas
 
@@ -29,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', landingPage, name='landingPage'),
     path('PreguntasFrecuentes/', preguntas, name='PreguntasFrecuentes'),
-    path('accounts/', include('apps.registrar.urls')),
     path('home/', include('apps.post.urls')),
+    path('home/', include('apps.pedidos.urls')),
+    path('accounts/', include('apps.registrar.urls'))
 ]
