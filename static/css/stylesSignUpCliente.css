@@ -46,7 +46,7 @@ input[type=number] { -moz-appearance:textfield; }
 .wrapper{
     max-width: 370px;
     width: 50%;
-    height: 450px;
+    height: 510px;
     background: #fff;
     margin: 20px auto;
     padding: 10px;
@@ -56,6 +56,7 @@ input[type=number] { -moz-appearance:textfield; }
     top: 90px;
     left: 30%;
 }
+
 
 .wrapper .title{
     font-size: 24px;
@@ -172,6 +173,139 @@ input[type=number] { -moz-appearance:textfield; }
         margin-bottom: 5px;
     }
     .wrapper .form .input_field.terms{
+        flex-direction: row;
+    }
+}
+
+.wrapper_login{
+    max-width: 370px;
+    width: 50%;
+    height: 230px;
+    background: #fff;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+    border-radius: 20px;
+    position: absolute;
+    top: 90px;
+    left: 30%;
+}
+
+.wrapper_login .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2E294E;
+    text-transform: uppercase;
+    text-align: center;
+}
+.wrapper_login .form{
+    width: 100%;
+}
+
+.wrapper_login .form .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper_login .form .input_field label{
+    width: 200px;
+    color: #2E294E;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper_login .form .input_field .input{
+    width: 100%;
+    outline: none;
+    border: 1px solid #2E294E;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 20px;
+    transition: all 0.3 ease;
+}
+
+.wrapper_login .form .input_field .input:focus{
+    border: 2.5px solid #5F799A;
+}
+
+.wrapper_login .form .input_field p{
+    font-size: 14px;
+    color: #5F799A;
+}
+.wrapper_login .form .input_field .check{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.wrapper_login .form .input_field .check input[type="checkbox"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.wrapper_login .form .input_field .check .checkmark{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #2E294E;
+    display: block;
+    position: relative;
+    background: #fff;
+}
+.wrapper_login .form .input_field .check .checkmark::before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.wrapper_login .form .input_field .check input[type="checkbox"]:checked ~ .checkmark {
+    background: #2E294E;
+}
+.wrapper_login .form .input_field .check input[type="checkbox"]:checked ~ .checkmark:before {
+    display: block;
+}
+
+.wrapper_login .form .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-style: 15px;
+    border: 0;
+    background: #2E294E;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+}
+
+.wrapper_login .form .input_field:last-child{
+    margin-bottom: 0;
+}
+
+.wrapper_login .form .input_field .btn:hover{
+    background: #5e66da;
+}
+
+@media (max-width: 420px){
+    .wrapper_login .form .input_field{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper_login .form .input_field label{
+        margin-bottom: 5px;
+    }
+    .wrapper_login .form .input_field.terms{
         flex-direction: row;
     }
 }
