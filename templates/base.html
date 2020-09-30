@@ -29,7 +29,7 @@
                 {% endif %}
             </nav>
             <div class="pedido">
-              <a href="{% url 'post-new' %}" role="button" class="btn btn-primary">Solicitar pedido</a>
+              <a href="{% url 'post-new1' %}" role="button" class="btn btn-primary">Solicitar pedido</a>
           </div>
         </div>
         <!--TARJETAS CON INFORMACION-->
@@ -38,8 +38,8 @@
                 <!-- BARRA LATERAL IZQUIERDA -->
                 <div class="col-md-3 barra-lateral-izquierda" id="barra-lateral-izquierda">
                     <nav>
-                        <a class="" href="#">Viajes</a>
-                        <a class="" href="#">Pedidos</a>
+                        <a class="" href="{% url 'viajes' %}"><i class="icon-mail"></i>Viajes</a>
+                        <a class="" href="{% url 'pedidos' %}"><i class="icon-mail"></i>Pedidos</a>
                         <a href=""><i class="icon-mail"></i> Mis enviós</a>
                         <hr>
                         <a href=""><i class="icon-users"></i> Registrarme como transportista</a>
