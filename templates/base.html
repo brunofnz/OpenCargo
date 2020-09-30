@@ -24,18 +24,12 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-            
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="#">INICIO</a>
-                        <a class="nav-link" href="#">VIAJES</a>
-                        <a class="nav-link" href="#">NOVEDADES</a>
-                        <a class="nav-link mr-4" href="#">MI CUENTA</a> 
-                    </div>
-                </div>
+                {% if user.is_authenticated %}
+                <h4>Hola! {{ user.first_name }} </h4>
+                {% endif %}
             </nav>
             <div class="pedido">
-              <a role="button" class="btn btn-primary">SOLICITAR PEDIDO</a>
+              <a href="{% url 'post-new' %}" role="button" class="btn btn-primary">Solicitar pedido</a>
           </div>
         </div>
         <!--TARJETAS CON INFORMACION-->
@@ -44,11 +38,14 @@
                 <!-- BARRA LATERAL IZQUIERDA -->
                 <div class="col-md-3 barra-lateral-izquierda" id="barra-lateral-izquierda">
                     <nav>
-                        <a href="#"><i class="icon-users"></i> Registrarme como transportista</a>
-                        <a href="#"><i class="icon-mail"></i> Mis enviós</a>
-                        <a href="#"><i class="icon-play"></i> Administrar usuarios</a>
-                        <a href="#"><i class="icon-file-image"></i> Consultas frecuentes</a>
-                        <a href="#"><i class="icon-music"></i> Cerrar sesión</a>
+                        <a class="" href="#">Viajes</a>
+                        <a class="" href="#">Pedidos</a>
+                        <a href=""><i class="icon-mail"></i> Mis enviós</a>
+                        <hr>
+                        <a href=""><i class="icon-users"></i> Registrarme como transportista</a>
+                        <hr>
+                        <a class="" href="#">Mi cuenta</a>
+                        <a href="{% url 'logout' %}"><i class="icon-music"></i> Cerrar sesión</a>
                     </nav>
                 </div>
                 <a href="#" class="fondo-enlace d-md-none" id="fondo-enlace"></a>
