@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div class="row">
+        {% for pedido in object_list %}
+            <div class="col-sm-12 col-md-6 col-lg-4 ">
+                <div class="card bg-light shadow p-3 mb-5 bg-white rounded">
+                    <img class="card-img-top" src="{% static 'img/plaza.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ pedido.desde }} --> {{ pedido.hasta }}</h5>
+                        <p class="card-text">Solicitante: {{ pedido.author }}</p>
+                        <p class="card-text"><small class="text-muted">Disponibilidad: {{ pedido.disponibilidad }}</small></p>
+                    </div>  
+                    <a href="{% url 'post-detail1' pedido.pk %}">Ver mas</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

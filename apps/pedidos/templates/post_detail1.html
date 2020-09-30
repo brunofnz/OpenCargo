@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col">
+    <h1>{{ pedido.desde }} - {{ pedido.hasta}} </h1>
+    <h5>Fecha de inicio: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ pedido.fecha_inicio.date }}</h5>
+    <h5>Solicitante: <a href="">{{ pedido.author }}</a></h5>
+    <hr>
+    <h4>{{ pedido.descripcion }}</h4>
+    <br>
+    <br/>
+    <a href="{% url 'pedidos'%}" class="btn btn-light">Volver</a>
+    <a href="" class="btn btn-dark">Contactar</a>
+</div>
+{% endblock %}
