@@ -5,7 +5,7 @@ from .models import Post
 
 # Homepage
 def home(request):
-    post = Post.objects.all()
+    post = Post.objects.order_by('id')
     return render(request, 'home.html', {'object_list': post})
 
 # GET Todos los posts.

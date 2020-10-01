@@ -1,66 +1,159 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   {% load static %}
   <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>HOME CLIENTE</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{% static 'Boostrap/css/bootstrap.min.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Panel de Usurio</title>
 
-        <link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
-        <link rel="stylesheet" href="{% static 'css/estilobarralateral.css' %}">
-        <link rel="stylesheet" href="{% static 'css/stylesmicuenta.css' %}">
+    <link rel="canonical" href="https:/dashboard/">
+    <link rel="stylesheet" href="{% static 'css/stylesmicuenta.css' %}">
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+    <link href="" rel="stylesheet">
   </head>
   <body>
-        <!--MENU CON LOGO-->
-        <div class="container-fluid bg-dark">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
-                <a class="navbar-brand" href="#">
-                    <div class="d-flex align-items-start">
-                        <img src="{% static 'img/logo1.png' %}" width="250" class="d-flex justify-content-start align-top" alt="" loading="lazy">
-                    </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                {% if user.is_authenticated %}
-                <h4>Hola! {{ user.first_name }} </h4>
-                {% endif %}
-            </nav>
-            <div class="pedido">
-              <a href="{% url 'post-new1' %}" role="button" class="btn btn-primary">Solicitar pedido</a>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#"><h5>Open Cargo</h5></a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+   
+  <div class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      {% if user.is_authenticated %}
+      <a class="nav-link" href="">Hola! {{ user.first_name }}</a>
+      {% endif %}
+    </div>
+    <a href="{% url 'post-new1' %}" role="button" class="btn btn-primary">Solicitar pedido</a>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'pedidos' %}">
+              <span data-feather="package"></span>
+              Pedidos<span class="box"></span>
+    
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'viajes' %}">
+              <span data-feather="navigation"></span>
+              Viajes<span class="box"></span>
+    
+            </a>
+          </li>
+          <hr>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'completarDatos' %}">
+              <span data-feather="plus"></span>
+              Completar datos 
+             
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'micuenta' %}">
+              <span data-feather="users"></span>
+              Mi Cuenta
+    
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'misEnvios' %}">
+              <span data-feather="map"></span>
+              Mis enviós  
+              
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'misPedidos' %}">
+              <span data-feather="archive"></span>
+              Mis pedidos  
+            
+            </a>
+          </li>
+          <hr>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'registrarseTransportista' %}">
+              <span data-feather="truck"></span>
+             Ser transportista
+            </a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">
+              <span data-feather="log-out"></span>
+              Cerrar sesión 
+            </a>
+          </li>
+          
+        </ul>
+
+        
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            
           </div>
         </div>
-        <!--TARJETAS CON INFORMACION-->
-        <main class="container">
-            <div class="row"> <!-- FILA -->
-                <!-- BARRA LATERAL IZQUIERDA -->
-                <div class="col-md-3 barra-lateral-izquierda" id="barra-lateral-izquierda">
-                    <nav>
-                        <a class="" href="{% url 'viajes' %}"><i class="icon-mail"></i>Viajes</a>
-                        <a class="" href="{% url 'pedidos' %}"><i class="icon-mail"></i>Pedidos</a>
-                        <a href=""><i class="icon-mail"></i> Mis enviós</a>
-                        <hr>
-                        <a href="{% url 'completarDatos' %}"><i class="icon-users"></i> Comprobar datos</a>
-                        <a href="{% url 'registrarseTransportista' %}"><i class="icon-users"></i> Registrarse como transportista</a>
-                        <hr>
-                        <a class="" href="">Mi cuenta</a>
-                        <a href="{% url 'logout' %}"><i class="icon-music"></i> Cerrar sesión</a>
-                    </nav>
-                </div>
-                <a href="#" class="fondo-enlace d-md-none" id="fondo-enlace"></a>
-                <div class="col contenido-principal">
-                    {% block content %}
-            
-                    {% endblock %}
-                </div>
-            </div>
-        </div>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      </div>
+      <div class="col contenido-principal">
+        {% block content %}
+  
+        {% endblock %}
+      </div>
+    </main>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="{% static 'js/dashboard.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="{% static 'Boostrap/js/bootstrap.min.js' %}"></script>
-    </body>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      </body>
 </html>
+
+
+
+
+
+
+
+
+

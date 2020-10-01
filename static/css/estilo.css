@@ -11,13 +11,25 @@
     overflow: hidden;
 }
 
+.titulo {
+    color: #dddddd;
+    margin-left: 35px;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/fondoHome.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
 
 /*HEADER*/
 nav {
     width: 100%;
     height: 80px;
     background: rgba(255, 255, 255, 0.596);
-    border-bottom: 1p solid transparent;
+    border-bottom: 1px solid transparent;
     box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
     position: fixed;
     
@@ -31,13 +43,14 @@ nav {
 .nav{
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 150px;
     width: 100%;
     align-items: center;
 }
 
 .nav .logo{
     height: 80px;
+    margin-bottom: 30px;
 }
 
 .nav .logo img{
@@ -46,13 +59,15 @@ nav {
 }
 
 .enlaces-header {
-    font-weight: 300;
+    font-weight: 300px;
+    margin-bottom: 60px;
 }
 
 .enlaces-header a{
-    color: #2e294e;
+    color: #334d5e;
     text-decoration: none;
     margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -62,12 +77,12 @@ nav {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 10%;
+    left: 50%;
     top: 50%;
-    transform: translate(-10%,-10%);
-    background: #2e2943;
+    transform: translate(-50%,-50%);
+    background: #dbdbdb;
     padding: 10px;
-    height: 40px;
+    height: 80px;
     border-radius: 40px;
 }
 .buscar-texto{
@@ -77,9 +92,9 @@ nav {
     color: white;
     font-size: 20px;
     float: left;
-    line-height: 30px;
+    line-height: 60px;
     transition: .3s;
-    width: 10px;
+    width: 0;
 }
 .boton{
     width: 40px;
@@ -93,22 +108,285 @@ nav {
 
 @media screen and (min-width:480px){
     .buscar:hover > .buscar-texto{
-        width: 50px;
+        width: 190px;
     }
 }
 
 @media screen and (min-width:768px){
     .buscar:hover > .buscar-texto{
-        width: 90px;
+        width: 300px;
     }
 }
 
 @media screen and (min-width:1024px){
     .buscar:hover > .buscar-texto{
-        width: 100px;
+        width: 500px;
     }
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+header{
+    width: 100%;
+    height: 90px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #d6d6d6;
+    text-align: center;
+}
+header .textos{
+    margin-top: 100px;
+
+}
+header .titulo{
+    font-size: 60px;
+
+}
+header .subtitulo{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+.boton{
+    display: inline-block;
+    padding: 6px;
+    width: 90px;
+    border: 1px solid #f1e9da;
+    color: #f1e9da;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+.sesgoabajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 25vh 98.7vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent ;
+}
+
+.sesgoarriba{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 25vh 100vw 0 0  ;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent ;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 42px 0;
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+.contenedor2{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 42px 0;
+    color: black;
+    text-align: center;
+    
+}
+
+.h2{
+    color: #fff;
+}
+
+
+.sobre-nosotros{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+        
+}
+
+.parrafo2{
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 24px;
+    color: black;
+}
+
+.parrafo{
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 24px;
+    color: #ffff;
+}
+
+.galeria{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.imagenes{
+    width: 50%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.encima{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #dbdbdb(52, 73, 94, 0.815);
+}
+
+.encima h2{
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: #dfdfdf;
+}
+
+.encima div{
+    position: relative;
+    display: block;
+    top: 46%;
+    width: 40px;
+    height: 5px;
+    background: #dbdbdb;
+    margin: auto;
+}
+
+.equipo{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    margin: 20px 0;
+    width: 30%;
+    height: 250%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 0 #dddddd(52, 73, 94, 0.849);
+}
+
+.card img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.texto{
+    color: black;
+}
+
+
+
+.sesgoabajo-unico{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #2e294e transparent ;
+
+}
+
+footer{
+    background: #2e294e;
+    height: auto;
+}
+.titulo-footer, .subtitulo-footer{
+    color: #fff;
+    text-align: center;
+    font-size: 56px;
+}
+
+.subtitulo-footer{
+    font-size: 16px;
+    font-weight: 400px;
+    margin-bottom: 64px;
+}
+
+
+form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+input[type="text"], input[type="email"]{
+    display: inline-block;
+    width: 48%;
+    padding: 13px;
+    border: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    margin-bottom: 16px;
+    border-top: 1px solid;
+}
+
+textarea{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 200%;
+    min-height: 200px;
+    background: #f1e9da;
+    padding: 13px;
+    border: none;
+    color: #dddddd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="submit"]{
+    display: inline-block;
+    padding: 13px;
+    border: none;
+    color: #f1e9da;
+    background: #2e294e;
+    width: 96px;
+}
 
 
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.views.generic import ListView, DetailView, CreateView
 from .forms import UserForm, UsuarioForm, TransportistaForm, VehiculoForm
-from .models import Localidad, Transportista, Vehiculo
+from .models import Localidad, Transportista, Vehiculo, Usuario
 
 
 # Create your views here.
@@ -44,3 +44,6 @@ def regsitrarseTransportista(request):
     localidad = Localidad.objects.all()
     return render(request,'registration/registrarseTransportista.html',{'transportista_form':transportista_form,'vehiculo_form':vehiculo_form,'object_list': localidad})
 
+def miCuenta(request):
+    usuarios = Usuario.objects.all()
+    return render(request,'registration/micuenta.html',{'usuarios': usuarios})

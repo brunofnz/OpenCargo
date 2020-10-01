@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% if user.is_authenticated %}
+{% for usuario in usuarios  %}
+{% if usuario.user.id == user.id %}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <h2>MI CUENTA</h2>
+        </div>
+    </div>
+        <div class="row d-flex justify-content-center">
+            <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ user.last_name }}, {{ user.first_name }}</h5>
+                    <p class="card-text">Cliente</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ usuario.telefono }}</li>
+                <li class="list-group-item">{{ usuario.localidad }} </li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Volver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+{% endblock %}

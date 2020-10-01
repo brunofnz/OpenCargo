@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  {% load static %}
+  <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HOME CLIENTE</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'Boostrap/css/bootstrap.min.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/estilobarralateral.css' %}">
+        <link rel="stylesheet" href="{% static 'css/stylesmicuenta.css' %}">
+  </head>
+  <body>
+        <!--MENU CON LOGO-->
+        <div class="container-fluid bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
+                <a class="navbar-brand" href="#">
+                    <div class="d-flex align-items-start">
+                        <img src="{% static 'img/logo1.png' %}" width="250" class="d-flex justify-content-start align-top" alt="" loading="lazy">
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                {% if user.is_authenticated %}
+                <h4>Hola! {{ user.first_name }} </h4>
+                {% endif %}
+            </nav>
+            <div class="pedido">
+              <a href="{% url 'post-new1' %}" role="button" class="btn btn-primary">Solicitar pedido</a>
+          </div>
+        </div>
+        <!--TARJETAS CON INFORMACION-->
+        <main class="container">
+            <div class="row"> <!-- FILA -->
+                <!-- BARRA LATERAL IZQUIERDA -->
+                <div class="col-md-3 barra-lateral-izquierda" id="barra-lateral-izquierda">
+                    <nav>
+                        <a class="" href="{% url 'viajes' %}"><i class="icon-mail"></i>Viajes</a>
+                        <a class="" href="{% url 'pedidos' %}"><i class="icon-mail"></i>Pedidos</a>
+                        <a href=""><i class="icon-mail"></i> Mis enviós</a>
+                        <a href="{% url 'misPedidos' %}"><i class="icon-mail"></i> Mis pedidos</a>
+                        <hr>
+                        <a href="{% url 'completarDatos' %}"><i class="icon-users"></i> Comprobar datos</a>
+                        <a href="{% url 'registrarseTransportista' %}"><i class="icon-users"></i> Registrarse como transportista</a>
+                        <hr>
+                        <a class="" href="">Mi cuenta</a>
+                        <a href="{% url 'logout' %}"><i class="icon-music"></i> Cerrar sesión</a>
+                    </nav>
+                </div>
+                <a href="#" class="fondo-enlace d-md-none" id="fondo-enlace"></a>
+                <div class="col contenido-principal">
+                    {% block content %}
+            
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="{% static 'Boostrap/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

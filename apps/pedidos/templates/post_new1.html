@@ -5,7 +5,7 @@
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button>Enviar</button>
+        <button type="submit" href="{% url 'misPedidos' %}" >Enviar</button>
     </form>
     <br/><br/>
     <a href="{% url 'pedidos'%}" class="btn btn-dark">Back</a>

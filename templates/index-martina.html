@@ -1,75 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-    {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenCargo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/stylesSignUpCliente.css' %}">
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="styles.css">
+    
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <style>
-        body{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static "img/fondoHome.jpg" %}');
-    height: 100vh;
-    background-size: cover;
-}
-.fondo{
-    height: 1000px;
-    position: relative;
-    background-image: url('{% static "img/hombre_sosteniendo_cajas.jpg" %}');
-    height: 100vh;
-    background-size: cover;
-    overflow: hidden;
-    background-attachment: fixed;
-    background-attachment: center;
-    padding-top: 130px;
-}
-
-
-
-@font-face {
-  font-family: "buscar";
-  src:url('{% static "fonts/buscar.eot" %}');
-  src:url('{% static "fonts/buscar.eot?#iefix" %}') format("embedded-opentype"),
-    url('{% static "fonts/buscar.woff" %}') format("woff"),
-    url('{% static "fonts/buscar.ttf" %}') format("truetype"),
-    url('{% static "fonts/buscar.svg#buscar" %}') format("svg");
-  font-weight: normal;
-  font-style: normal;
-
-}
-    </style>
 </head>
 
-
-<header>
-    <nav>
-        <section>
-            <div class="contenedor nav">
-                
-                    <img class="logo" src="{% static 'img/logo1.png' %}" alt="">
-                
-                <div class="enlaces-header">
-                    <a href="{% url 'landingPage'%}">Home</a>
-                    <a href="{% url 'registrarse'%}">Registrarse</a>
-                    <a href="{% url 'login'%}">Ingresar</a>
-                </div>
-            </div>
-        </section>
-    </nav>
-</header>
 <body>
-    <div class="container">
-        {% block content %}
-    
-        {% endblock %}
-        
-    
-    
+    <header>
+        <nav>
+            <section>
+                <div class="contenedor nav">
+                    <div class="logo">
+                        <img src="img/logo1.png" alt="">
+                    </div>
+                    <div class="enlaces-header">
+                        <a href="#">Registrarse como transporte</a>
+                        <a href="#">Registrarse como cliente</a>
+                        <a href="#">Ingresar</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <div class="textos">
+        <h1 class="titulo">Preguntas frecuentes</h1>
+    </div>
     <main>
         <section class="acerca-de">
         <div class="contenedor"> 
@@ -101,11 +63,11 @@
         <section class="galeria"> 
             <div class="sesgoabajo"></div>
             <div class="imagenes">
-                <img src="{% static 'img/hombre_en_auto.jpg' %}" alt=""></div>
+                <img src="hombre_en_auto.jpg" alt=""></div>
             <div class="imagenes">
-                <img src="{% static 'img/mujer_comprando_desde_pc_con_tarjeta.jpg' %}" alt=""></div>
+                <img src="mujer_sosteniendo_caja_sonriente.jpg" alt=""></div>
             <div class="imagenes">
-                <img src="{% static 'img/hombre_entregando_paquete_en_auto.jpg' %}" alt=""></div>
+                <img src="hombre_entregando_paquete_en_auto.jpg" alt=""></div>
     
         </section>
         <section class="miembros">
@@ -117,49 +79,49 @@
         <section class="equipo">
          
                 <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Antonella Duca</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Bruno Fernandez</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Nico</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Martina</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Luis Córdoba</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Jonatan</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                   <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Gabriel Herrera</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
                 </div>
                 <div class="card">
-                    <img src="{% static 'img/isologo - con borde.png' %}" alt="">
+                    <img src="isologo - con borde.png" alt="">
                     <h4>Samuel R</h4>
                     <p>Lorem ipsum dolor sit.</p>
 
@@ -168,14 +130,13 @@
             </div>
         </section>
         <section class="fondo">
-                <div class="contenedor2">Informatorio virtual 2020</h3>
+                <div class="contenedor">Informatorio virtual 2020</h3>
                     <h2 class="subtitulo-creadores">Nuestra historia</h2>
-                    <p class="parrafo2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam tempore debitis, voluptate reprehenderit ducimus minima, dolorem dicta vitae aliquid tenetur? Impedit officia non quia vitae ut id pariatur a, unde officiis corporis provident iste numquam quae perferendis commodi voluptatum adipisci quisquam et cum aliquid saepe mollitia! Corrupti rem in doloribus sed voluptate similique assumenda unde dolorem ullam sint, voluptatem vel repellat quasi quia sunt labore at quis, quo nostrum!</p>
+                    <p class="parrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam tempore debitis, voluptate reprehenderit ducimus minima, dolorem dicta vitae aliquid tenetur? Impedit officia non quia vitae ut id pariatur a, unde officiis corporis provident iste numquam quae perferendis commodi voluptatum adipisci quisquam et cum aliquid saepe mollitia! Corrupti rem in doloribus sed voluptate similique assumenda unde dolorem ullam sint, voluptatem vel repellat quasi quia sunt labore at quis, quo nostrum!</p>
                 </div>
             <div class="sesgoabajo-unico"></div>
         </section>
     </main>
-</div>
     <footer>
         <div class="contenedor">
             <h2 class="titulo-footer">Contactanos</h2>
@@ -193,9 +154,6 @@
 
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>

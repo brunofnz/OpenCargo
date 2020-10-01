@@ -1,12 +1,21 @@
 from django.shortcuts import render
 from django.utils import timezone
 from django.views.generic import ListView, DetailView, CreateView
-from .models import Pedido
+from .models import Pedido, Envio
 
 # Homepage
 def home(request):
-    pedido = Pedido.objects.all()
+    pedido = Pedido.objects.order_by('-id')
     return render(request, 'home1.html', {'object_list': pedido})
+
+def misPedidos(request):
+    pedido = Pedido.objects.order_by('-id')
+    return render(request, 'misPedidos.html', {'object_list': pedido})
+
+def misEnvios(request):
+    envios = Envio.objects.order_by('-id')
+    pedidos = Pedido.objects.order_by('-id')
+    return render(request, 'misEnvios.html', {'envios': envios,'pedidos':pedidos})
 
 # GET Todos los posts.
 def posts(request):
@@ -31,3 +40,12 @@ class PostCreateView(CreateView):
       model = Pedido
       template_name = 'post_new1.html'
       fields = '__all__'
+
+class misPedidosView(ListView):
+    model = Pedido
+    template_name = 'misPedidos.html'
+
+# GET Un post por medio de su id (o Primary Key).
+class misPedidosDetailView(DetailView):
+    model = Pedido
+    template_name = 'detalleMiPedido.html'

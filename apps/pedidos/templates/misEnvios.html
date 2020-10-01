@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+        {% if user.is_authenticated %}
+        {% for pedido in pedidos %}
+        {% for envio in envios %}
+        {% if pedido.author.id == user.id and envio.author.id == user.id %}
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+            <h5 class="card-header ">{{ envio.fecha_alta}} Envio #{{ envio.id }}</h5>
+            <div class="card-body">
+
+                <h5 class="card-title text-center"> </h5>
+                <p class="card-text aling-center">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                    <h6>
+                        <P>Desde: {{ pedido.desde }} </P>
+                        <p>Hasta: {{ pedido.hasta }}</p>
+                        <p>Entregado a transporte: {{ envio.entregado }}.</p>
+                        <p>Estado: {{ envio.estado }}.</p>
+                        <p>Por: {{usuario.first_name}} | {{usuario.username}}</p>
+                    </h6>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <h6>
+                          <P> Paquetes: {{ pedido.paquetes }} </P>
+                          <P> Peso: {{ pedido.peso }} kg.</P>
+                          <P> Peso: {{ conductor.first_name }} kg.</P>
+                        </h6>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <h6>
+                          <P> Descripción: {{ pedido.descripcion }}</P>
+                        </h6>
+                      </div>
+                    <div class="form-group col-md-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Opciones
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                        
+                        <button class="dropdown-item" type="button">Iniciar Reclamo</button>
+                        <button class="dropdown-item" type="button">Necesito ayuda</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <!-- Default dropright button -->
+                
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

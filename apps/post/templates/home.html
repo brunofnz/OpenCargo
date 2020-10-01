@@ -6,9 +6,13 @@
         {% for post in object_list %}
             <div class="col-sm-12 col-md-6 col-lg-4 ">
                 <div class="card bg-light shadow p-3 mb-5 bg-white rounded">
-                    <img class="card-img-top" src="{% static 'img/plaza.jpg' %}" alt="Card image cap">
+                    
                     <div class="card-body">
-                        <h5 class="card-title">{{ post.desde }} --> {{ post.hasta }}</h5>
+                        <h5 class="card-title">{{ post.desde }}</h5>
+                        <hr>
+                        <h5 class="card-title">{{ post.hasta }}</h5>
+                        <br>
+                        
                         <p class="card-text">Transportista: {{ post.author }}</p>
                         <p class="card-text"><small class="text-muted">Disponibilidad: {{ post.disponibilidad }}</small></p>
                     </div>  

@@ -34,6 +34,7 @@ class Usuario(models.Model):
     localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE)
     cuil_cuit = models.CharField(max_length= 50, blank=False, null=False)
     fecha_nacimiento = models.DateField(blank=False,null=False)
+    telefono = models.CharField(max_length= 50, blank=False, null=True)
     fecha_alta = models.DateField(auto_now=True,auto_now_add=False)
 
     class Meta:
