@@ -16,7 +16,7 @@ class Provincia(models.Model):
 
 class Localidad(models.Model):
     id_localidad = models.AutoField(primary_key=True)
-    id_provincia = models.OneToOneField(Provincia, on_delete=models.CASCADE)
+    id_provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE)
     nombre = models.CharField(max_length= 60, blank=False, null=False)
 
     class Meta:
@@ -31,7 +31,7 @@ class Usuario(models.Model):
     id_usuario = models.AutoField(primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     direccion = models.CharField(max_length= 50, blank=False, null=False)
-    localidad = models.OneToOneField(Localidad, on_delete=models.CASCADE)
+    localidad = models.ForeignKey(Localidad, on_delete=models.CASCADE)
     cuil_cuit = models.CharField(max_length= 50, blank=False, null=False)
     fecha_nacimiento = models.DateField(blank=False,null=False)
     fecha_alta = models.DateField(auto_now=True,auto_now_add=False)
@@ -59,7 +59,7 @@ class Transportista(models.Model):
         ordering = ['id_transportista']
 
     def __str__(self):
-        return "{}, {}".format(self.user.apellido,self.user.nombre)
+        return "{}, {}".format(self.user.user.last_name,self.user.user.first_name)
 
 class Vehiculo(models.Model):
     id_vehiculo = models.AutoField(primary_key=True)
