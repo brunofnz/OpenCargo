@@ -8,9 +8,10 @@
         <title>HOME CLIENTE</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{% static 'Boostrap/css/bootstrap.min.css' %}">
+
         <link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
         <link rel="stylesheet" href="{% static 'css/estilobarralateral.css' %}">
-        
+        <link rel="stylesheet" href="{% static 'css/stylesmicuenta.css' %}">
   </head>
   <body>
         <!--MENU CON LOGO-->
@@ -42,9 +43,10 @@
                         <a class="" href="{% url 'pedidos' %}"><i class="icon-mail"></i>Pedidos</a>
                         <a href=""><i class="icon-mail"></i> Mis enviós</a>
                         <hr>
-                        <a href=""><i class="icon-users"></i> Registrarme como transportista</a>
+                        <a href="{% url 'completarDatos' %}"><i class="icon-users"></i> Comprobar datos</a>
+                        <a href="{% url 'registrarseTransportista' %}"><i class="icon-users"></i> Registrarse como transportista</a>
                         <hr>
-                        <a class="" href="#">Mi cuenta</a>
+                        <a class="" href="">Mi cuenta</a>
                         <a href="{% url 'logout' %}"><i class="icon-music"></i> Cerrar sesión</a>
                     </nav>
                 </div>

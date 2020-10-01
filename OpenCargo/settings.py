@@ -122,7 +122,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOGIN_REDIRECT_URL = reverse_lazy('landing')
+LOGIN_REDIRECT_URL = reverse_lazy('pedidos')
 LOGOUT_REDIRECT_URL = reverse_lazy('landingPage')
 
 # Static files (CSS, JavaScript, Images)

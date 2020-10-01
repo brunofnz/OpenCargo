@@ -32,5 +32,6 @@ urlpatterns = [
     path('PreguntasFrecuentes/', preguntas, name='PreguntasFrecuentes'),
     path('home/', include('apps.post.urls')),
     path('home/', include('apps.pedidos.urls')),
+    #path('home/', include('apps.miCuenta.urls')),
     path('accounts/', include('apps.registrar.urls'))
 ]
